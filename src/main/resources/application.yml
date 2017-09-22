@@ -11,5 +11,5 @@ spring:
       repositories:
       enabled: true
 server:
-  port: 8080
+  port: 50100
   context-path: /smartpark
