@@ -7,8 +7,6 @@ import ro.tremend.smartpark.model.ParkingSpot;
 
 import java.util.List;
 
-import static javafx.scene.input.KeyCode.T;
-
 /**
  * Created by Andrei Olteanu on 22-Sep-17.
  */
