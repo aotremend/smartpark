@@ -26,7 +26,10 @@ public class LoraController {
         }
         try {
             String decodedPayload = new String(bytes, "UTF-8");
-            System.out.println("HERE>>> " + decodedPayload);
+            System.out.println("=============================");
+            System.out.println("payload_hex:  " + payload_hex);
+            System.out.println("Decoded " + decodedPayload);
+            System.out.println("=============================");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
