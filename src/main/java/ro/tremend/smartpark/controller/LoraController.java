@@ -17,7 +17,7 @@ public class LoraController {
 
     @PostMapping(value = "/lora")
     public void loraCallback(@RequestBody JsonNode jsonNode) {
-        String payload_hex = jsonNode.get("payload_hex").textValue();
+        String payload_hex = jsonNode.get("DevEUI_uplink").get("payload_hex").textValue();
         byte[] bytes = new byte[0];
         try {
             bytes = Hex.decodeHex(payload_hex.toCharArray());
