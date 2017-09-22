@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: smartpark
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/smart_park
+    username: root
+    password: root
+  data:
+    jpa:
+      repositories:
+      enabled: true
+server:
+  port: 8080
+  context-path: /smartpark
