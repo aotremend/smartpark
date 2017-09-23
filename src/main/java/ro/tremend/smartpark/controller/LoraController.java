@@ -54,8 +54,8 @@ public class LoraController {
             Iterator<ParkingSpot> iterator = parkingSpotRepository.findAll().iterator();
             while (iterator.hasNext()) {
                 ParkingSpot parkingSpot1 = iterator.next();
-                if(almostEqual(parkingSpot.getLatitude(), parkingSpot1.getLatitude())
-                        && almostEqual(parkingSpot.getLongitude(), parkingSpot1.getLongitude())) {
+                if(parkingSpot.getLatitude().equals(parkingSpot1.getLatitude())
+                        && parkingSpot.getLongitude().equals(parkingSpot1.getLongitude())) {
                     existing = parkingSpot1;
                     break;
                 }
@@ -76,8 +76,8 @@ public class LoraController {
         }
     }
 
-    public static boolean almostEqual(Double a, Double b){
-        double eps = 0.000;
-        return Math.abs(a-b)<eps;
-    }
+//    public static boolean almostEqual(Double a, Double b){
+//        double eps = 0.0001;
+//        return Math.abs(a-b)<eps;
+//    }
 }
