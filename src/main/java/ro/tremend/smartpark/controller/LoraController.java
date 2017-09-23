@@ -45,6 +45,11 @@ public class LoraController {
             parkingSpot.setState("available");
             parkingSpot.setModified(new Date());
 
+            if(parkingSpot.getLatitude().equals(Double.valueOf("0.000000"))) {
+                System.out.println("Ignoring parking spot 0.000000");
+                return;
+            }
+
             ParkingSpot existing = null;
             Iterator<ParkingSpot> iterator = parkingSpotRepository.findAll().iterator();
             while (iterator.hasNext()) {
