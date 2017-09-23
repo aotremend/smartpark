@@ -72,4 +72,16 @@ public class ParkingSpot {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    @Override
+    public String toString() {
+        return "ParkingSpot{" +
+                "id=" + id +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", state='" + state + '\'' +
+                ", modified=" + modified +
+                ", username='" + username + '\'' +
+                '}';
+    }
 }
