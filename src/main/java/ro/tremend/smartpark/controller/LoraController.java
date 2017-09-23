@@ -77,7 +77,7 @@ public class LoraController {
     }
 
     public static boolean almostEqual(Double a, Double b){
-        double eps = 0.001;
+        double eps = 0.00001;
         return Math.abs(a-b)<eps;
     }
 }
